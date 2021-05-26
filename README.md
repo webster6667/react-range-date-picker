@@ -3,7 +3,7 @@
 </p>
 
 # react-range-date-picker
-Date picker for select single day.
+Date picker for select date range
 Has many hooks for implementation business logic.
 Has the ability change nav and cell layout
 
