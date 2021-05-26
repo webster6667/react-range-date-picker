@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist",
+
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+
+    "declaration": true,
+    "emitDeclarationOnly": true,
+
+    "sourceMap": true,
+
+    "jsx": "preserve",
+    "allowJs": true, //Проходится по js файлам
+    "noImplicitAny": false,
+
+    "strict": true, //Строгий режим
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules/",
+    "lib",
+    "es",
+    "**/*.test.*"
+  ]
+}

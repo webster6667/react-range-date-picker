@@ -1,0 +1,137 @@
+@import "_help-mixin";
+
+.range-date-picker {
+  display: inline-flex;
+  flex-direction: column;
+
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__nav {
+    display: flex;
+  }
+
+  &__selected-month {
+    flex-grow: 1;
+    text-align: center;
+
+    //Имя месяца и год
+    span {
+      align-items: center;
+      justify-content: center;
+      margin: 0 2px;
+
+      font-size: 12px;
+      color: black;
+    }
+
+  }
+
+  //Стрелки
+  &__arrow {
+    position: relative;
+
+    @size: 20px;
+    width: @size;
+    height: @size;
+
+    cursor: pointer;
+
+    //Сами стрелки
+    svg {
+      width: 10px;
+      fill: slategrey;
+    }
+
+    &:hover svg {
+      fill: black;
+    }
+
+    &_left {
+
+      svg {
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
+
+      &:hover {
+        transform: translateX(-1px);
+      }
+
+    }
+
+    &_right:hover {
+      transform: translateX(1px);
+    }
+  }
+
+  &__header-row {
+    display: flex;
+  }
+
+  &__day-of-week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @size: 25px;
+    width: @size;
+    height: @size;
+
+    color: silver;
+    font-size: 9px;
+  }
+
+  //Таблица с датами
+  &__table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  //Сроки ячеек
+  &__date-row {
+    display: flex;
+  }
+
+  //Ячейки
+  &__date-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @size: 25px;
+    width: @size;
+    height: @size;
+
+    & > span {
+      flex-grow: 1;
+      line-height: 25px;
+      text-align: center;
+
+      font-size: 12px;
+      cursor: pointer;
+      color: #000;
+    }
+
+    &_prev, &_next {
+      color: #a9a9a9;
+    }
+
+    &_selected {
+      background-color: #cecece;
+    }
+    
+    &_from, &_to {
+      background-color: #888888;
+    }
+
+    &_focus {
+      //background-color: #2d2d2d;
+    }
+
+  }
+
+}
